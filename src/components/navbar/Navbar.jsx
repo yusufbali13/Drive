@@ -29,7 +29,6 @@ const Navbar = () => {
           <li>
             <AiOutlineUser />
           </li>
-          <li></li>
         </ul>
       </nav>
     </header>
