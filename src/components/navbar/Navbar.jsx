@@ -31,6 +31,9 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
+      <div className="{styles.mobile_btn}">
+        <AiOutlineMenu size={25} />
+      </div>
     </header>
   );
 };
