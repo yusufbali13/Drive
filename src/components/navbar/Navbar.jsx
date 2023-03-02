@@ -14,7 +14,11 @@ const Navbar = () => {
     <header className={styles.navbar}>
       <img src={Logo} alt="/" />
       <nav>
-        <ul className={styles.menu}>
+        <ul
+          className={
+            nav ? [styles.menu, styles.active].join(" ") : [styles.menu]
+          }
+        >
           <li>
             <a href="/">Learn More</a>
           </li>
