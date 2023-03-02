@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import { React, useState } from "react";
 import styles from "./Navbar.module.css";
+import Logo from "../../images/logo.png";
 import {
+  AiOutlineUser,
+  AiOutlineSearch,
   AiOutlineMenu,
   AiOutlineClose,
-  AiOutlineSearch,
-  AiOutlineUser,
 } from "react-icons/ai";
-import Logo from "../../images/logo.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+
   return (
     <header className={styles.navbar}>
-      <img src={Logo} alt="/" />
+      <img src={Logo} alt="Logo" />
       <nav>
         <ul
           className={
@@ -20,13 +21,13 @@ const Navbar = () => {
           }
         >
           <li>
-            <a href="/">Learn More</a>
+            <a href="/#">Learn More</a>
           </li>
           <li>
-            <a href="/">Log in</a>
+            <a href="/#">Log in</a>
           </li>
           <li>
-            <a href="/">Sign up</a>
+            <a href="/#">Sign up</a>
           </li>
           <li>
             <AiOutlineSearch size={25} style={{ marginTop: "6px" }} />
@@ -36,8 +37,8 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <div onClick={() => setNav(!nav)} className="{styles.mobile_btn}">
-        {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
+      <div onClick={() => setNav(!nav)} className={styles.mobile_btn}>
+        {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
       </div>
     </header>
   );
